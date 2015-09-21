@@ -16,7 +16,7 @@
 </head>
 <header>
   <div class="page-header text-center">
-    <h1>Binary Converter</h1>
+    <h1>Number Converter</h1>
     <h2>By: Jeff Ward</h2>
   </div>
 </header>
@@ -29,20 +29,52 @@
   <div class="divider"></div>
   <div class="row buttons">
     <div class="col-md-12 text-center">
-      <div class="col-md-6">
-        <button type="button" class="binaryConversion selected">Convert from Binary</button>
+      <div class="col-md-8 text-center col-centered ">
+        <div id="step1">
+        <label class="dd-menu">1.) Select your which number type you would like to convert <span>from</span>:</label>
+          <select class="form-control selectpicker show-tick dd-menu" style="width: 100px;">
+          <option value="one">One</option>
+          <option value="two">Two</option>
+          <option value="three">Three</option>
+          <option value="four">Four</option>
+          <option value="five">Five</option>
+        </select>
+        </div>
+        <div id="step2">
+          <label class="dd-menu">2.) Select your which number type you would like to convert <span>to</span>:</label>
+          <select class="form-control selectpicker show-tick dd-menu" style="width: 100px;">
+          <option value="one">One</option>
+          <option value="two">Two</option>
+          <option value="three">Three</option>
+          <option value="four">Four</option>
+          <option value="five">Five</option>
+        </select>
+        </div>
+
       </div>
-      <div class="col-md-4">
-        <button type="button" class="decimalConversion">Convert from Decimal</button>
-      </div>
+
+    </div>
+  </div>
+  <div class="divider2"></div>
+  <div class="row inputArea">
+    <div class="input col-md-6 text-center ">
+    <label>3.) Enter a Source Number: </label>
+      <input type="text"  class="form-control text-center" placeholder="Your Number" style="width: 200px;">
+
+
+    </div>
+    <div class="output col-md-6 text-center ">
+      <label>Output Number: </label>
+      <input type="text"  class="form-control text-center" placeholder="Converted Number" style="width: 200px;">
+
+
     </div>
   </div>
 
 
 
 
-
-
+  <button type="button" id="convertBtn" class="binaryConversion selected">Convert from Binary</button>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
   <script src="js/pageFlow.js"></script>
