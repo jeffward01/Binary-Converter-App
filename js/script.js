@@ -1,8 +1,6 @@
+var myMathLibrary = (function () {
 
-
-var myMathLibrary = (function(){
-
-    function binaryToDec(number) {
+  function binaryToDec(number) {
     var digit = parseInt(number, 2);
     return digit;
   }
@@ -50,7 +48,7 @@ var myMathLibrary = (function(){
 $('#convertBtn').on("click", function () {
   var sourceNumber = $("#sourceNumber").val();
   var midNumber;
-  var secondMidNumber
+  var secondMidNumber = 0;
   var finalNumber = $("#convertedNumber").val();
 
   var convertFrom = $('#convertFrom').find(":selected").text();
@@ -59,47 +57,45 @@ $('#convertBtn').on("click", function () {
 
 
   //Convert From Configuration
-  switch(convertFrom){
-     case "Binary":
-       midNumber = myMathLibrary.b2d(sourceNumber);
+  switch (convertFrom) {
+  case "Binary":
+    midNumber = myMathLibrary.b2d(sourceNumber);
     break;
   case "Octal":
-     midNumber = myMathLibrary.o2d(sourceNumber);
+    midNumber = myMathLibrary.o2d(sourceNumber);
     break;
   case "Hexidecimal":
-     midNumber = myMathLibrary.h2d(sourceNumber);
+    midNumber = myMathLibrary.h2d(sourceNumber);
     break;
-    case "Decimal":
-      midNumber = sourceNumber;
+  case "Decimal":
+    midNumber = sourceNumber;
+      midNumber = parseInt(midNumber);
+      break;
   default:
     alert("There has been an error in the convertFROM");
-}
-
+  }
+alert("this is your midnumber: " + typeof midNumber);
   //Convert To Config
- switch(convertTo){
-     case "Binary":
-      secondMidNumber = myMathLibrary.d2b(midNumber);
+  switch (convertTo) {
+  case "Binary":
+    secondMidNumber = myMathLibrary.d2b(midNumber);
     break;
   case "Octal":
     secondMidNumber = myMathLibrary.d2o(midNumber);
     break;
   case "Hexidecimal":
-   secondMidNumber = myMathLibrary.d2h(midNumber);
+    secondMidNumber = myMathLibrary.d2h(midNumber);
     break;
-   case "Decimal":
-     midNumber = secondMidNumber;
+  case "Decimal":
+    secondMidNumber = midNumber;
+    break;
   default:
     alert("There has been an error in the convertTO");
- }
+  }
 
- finalNumber = secondMidNumber;
-  finalNumber.toString();
-  alert(finalNumber);
-
-});//End Click
+  finalNumber = secondMidNumber;
 
 
+  document.getElementById('convertedNumber').value = finalNumber;
 
-
-
-
+}); //End Click
