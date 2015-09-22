@@ -34,6 +34,7 @@
 
 .inputArea {
   margin-top: 20px;
+  max-height: 40%;
 }
 
 .dd-menu {
@@ -55,7 +56,7 @@ input {
 
 .input {
   border-right: 5px solid black;
-  height: 250px;
+
 }
 
 
@@ -119,7 +120,8 @@ input {
 margin: 0 auto;
 }
 .button{
-display: none;
+
+  width: 100%;
 }
 
 

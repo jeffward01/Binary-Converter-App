@@ -33,7 +33,7 @@
       <div class="col-md-8 text-center col-centered ">
         <div id="step1">
           <label class="dd-menu">1.) Select your which number type you would like to convert <span>from</span>:</label>
-          <select class="form-control selectpicker show-tick dd-menu" style="width: 175px;">
+          <select id="convertFrom" class="form-control selectpicker show-tick dd-menu" style="width: 175px;">
             <option value="default">Choose...</option>
             <option value="Binary">Binary</option>
             <option value="Octal">Octal</option>
@@ -44,7 +44,7 @@
         </div>
         <div id="step2">
           <label class="dd-menu">2.) Select your which number type you would like to convert <span>to</span>:</label>
-          <select class="form-control selectpicker show-tick dd-menu" style="width: 175px;">
+          <select id="convertTo" class="form-control selectpicker show-tick dd-menu" style="width: 175px;">
             <option value="default">Choose...</option>
             <option value="Binary">Binary</option>
             <option value="Octal">Octal</option>
@@ -60,19 +60,19 @@
   <div class="divider2"></div>
   <div class="row button">
     <div class="col-md-12 text-center col-centered">
-      <button type="button" id="convertBtn" class="binaryConversion col-centered button">Convert from Binary</button>
+      <button type="button" id="convertBtn" class="binaryConversion col-centered">Convert from Binary</button>
     </div>
   </div>
   <div class="row inputArea">
     <div class="input col-md-6 text-center ">
       <label>3.) Enter a Source Number: </label>
-      <input type="text" class="form-control text-center" placeholder="Your Number" style="width: 200px;">
+      <input type="text" id="sourceNumber" class="form-control text-center" placeholder="Your Number" style="width: 200px;">
 
 
     </div>
     <div class="output col-md-6 text-center ">
       <label>Output Number: </label>
-      <input type="text" class="form-control text-center" placeholder="Converted Number" style="width: 200px;">
+      <input type="text" id="convertedNumber" class="form-control text-center" placeholder="Converted Number" style="width: 200px;">
     </div>
   </div>
 
